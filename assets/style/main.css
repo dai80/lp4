@@ -1,0 +1,776 @@
+@charset "UTF-8";
+
+/* ベースのスタイル
+------------------------------------------ */
+body {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-weight: 400;
+    line-height: 1.75;
+    color: #000;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+
+ul {
+    list-style: none;
+}
+
+/* 部品 ボタン 共通
+------------------------------------------ */
+main {
+    display: block;
+}
+
+.button {
+    display: block;
+    text-align: center;
+    border-radius: 0.25rem;
+}
+
+.button--blue {
+    width: 14.5rem;
+    padding: 0.75rem 3.5rem 0.75rem;
+    background-color: #004DA4;
+    margin: 0 auto;
+    font-size: 0.9375rem;
+    color: #fff;
+    font-weight: bold;
+}
+
+@media (min-width: 768px) {
+    .button--blue {
+        width: 21.125rem;
+        font-size: 1.375rem;
+    }
+}
+
+@media (hover: hover) {
+    .button--blue:hover {
+        opacity: 0.6;
+        transition: opacity 0.2s ease;
+    }
+}
+
+.section__title {
+    font-family: 'Outfit', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    color: #003E92;
+    margin-bottom: 0.5rem;
+}
+
+@media (min-width: 768px) {
+    .section__title {
+        font-size: 1.25rem;
+        text-align: left;
+    }
+}
+
+.section1__title {
+    font-family: 'Outfit', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    color: #003E92;
+    margin-bottom: 0.5rem;
+}
+
+@media (min-width: 768px) {
+    .section1__title {
+        font-size: 1.25rem;
+        text-align: center;
+    }
+}
+
+.section__catch {
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .section__catch {
+        font-size: 1.75rem;
+        text-align: left;
+        margin-bottom: 1.5rem;
+    }
+}
+
+.section1__catch {
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .section1__catch {
+        font-size: 1.75rem;
+    }
+}
+
+.section__text {
+    font-weight: 400;
+    margin-bottom: 2rem;
+}
+
+/* ヘッダー
+------------------------------------------ */
+.header {
+    position: fixed;
+    padding: 1.15rem 0 1.05rem 31px;
+    z-index: 1;
+    background-color: #FD5B19;
+    width: 100%;
+    top: 0;
+}
+
+@media (min-width: 768px) {
+    .header {
+        padding: 1.625rem 0 1.625rem 6.25rem;
+    }
+}
+
+/* ロゴ */
+h1 {
+    line-height: 1;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    h1 {
+        text-align: left;
+    }
+}
+
+h1 img {
+    max-width: 9.125rem;
+}
+
+@media (min-width: 768px) {
+    h1 img {
+        max-width: 12.1875rem;
+    }
+}
+
+@media (hover: hover) {
+    h1 img:hover {
+        opacity: 0.6;
+        transition: opacity 0.2s ease;
+    }
+}
+
+
+/* カバー
+ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
+.cover {
+    margin-top: 4.175rem;
+    background-color: #FD5B19;
+    padding: 0 0.9375rem 3rem;
+}
+
+@media (min-width: 768px) {
+    .cover {
+        margin-top: 1.625rem;
+    }
+}
+
+.cover__wrapper-container {
+    display: flex;
+    margin-bottom: 1.25rem;
+    flex-direction: column;
+}
+
+@media (min-width: 768px) {
+    .cover__contents {
+        max-width: 75rem;
+        margin: 0 auto;
+    }
+
+    .cover__wrapper-container {
+        display: flex;
+        flex-direction: row-reverse;
+        margin-bottom: 2rem;
+        column-gap: 2.125rem;
+    }
+
+    .cover__wrapper-container img {
+        width: 50%;
+        z-index: 1;
+    }
+
+    .cover__wrapper-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+
+.cover__wrapper-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 2.375rem;
+    font-weight: bold;
+    color: #fff;
+    line-height: 1.3;
+    margin-bottom: 0.4125rem;
+}
+
+@media (min-width: 768px) {
+    .cover__wrapper-title {
+        font-size: 4rem;
+        margin-bottom: 1.25rem;
+    }
+}
+
+.cover__wrapper-title span {
+    display: block;
+}
+
+.cover__wrapper-catch {
+    font-size: 0.9375rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+@media (min-width: 768px) {
+    .cover__wrapper-catch {
+        font-size: 1.25rem;
+    }
+}
+
+/* contact
+----------------------------------------------------------*/
+.contact {
+    padding: 1.5rem 4.0625rem 1.5rem;
+    background-color: #BCE0EB;
+}
+
+@media (min-width: 768px) {
+    .contact {
+        padding: 2.5rem 4.0625rem 2.5rem;
+    }
+}
+
+.contact__text {
+    display: flex;
+    justify-content: center;
+    font-size: 0.875rem;
+    font-weight: bold;
+    color: #004DA4;
+    margin-bottom: 0.4875rem;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .contact__text {
+        font-size: 1.25rem;
+        margin-bottom: 1.2375rem;
+    }
+}
+
+
+.contact__text::before {
+    margin-right: 1rem;
+    transform: rotate(-31deg);
+}
+
+.contact__text::after {
+    margin-left: 1rem;
+    transform: rotate(31deg);
+}
+
+.contact__text::before,
+.contact__text::after {
+    width: 0.3%;
+    height: 2.225rem;
+    content: "";
+    background-color: #004DA4;
+}
+
+@media (min-width: 768px) {
+
+    .contact__text::before,
+    .contact__text::after {
+        width: 0.2%;
+        height: 2.6875rem;
+        content: "";
+        background-color: #004DA4;
+    }
+}
+
+/* ABOUT
+-------------------------------------------------------------*/
+.about {
+    padding: 2.5rem 0.9375rem 2.5rem;
+    background-color: #FFFAF5;
+}
+
+@media (min-width: 768px) {
+    .about {
+        padding: 5rem 0.9375rem 5rem;
+    }
+}
+
+.about__container {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 768px) {
+    .about__container {
+        flex-direction: row-reverse;
+        column-gap: 7.4938rem;
+        max-width: 59.0044rem;
+        margin: 0 auto;
+    }
+
+    .about__title-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 66.1rem;
+    }
+}
+
+.about__img-box {
+    position: relative;
+    text-align: center;
+}
+
+.about__img-box img {
+    width: 52%;
+}
+
+@media (min-width: 768px) {
+    .about__img-box img {
+        width: 100%;
+    }
+}
+
+.about__img-text {
+    position: absolute;
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media (min-width: 768px) {
+    .about__img-text {
+        font-size: 1.875rem;
+    }
+}
+
+.about__img-box p span {
+    margin-left: 0.225rem;
+}
+
+@media (min-width: 768px) {
+    .about__img-box p span {
+        margin-left: 0.525rem;
+    }
+}
+
+/* REASONS
+---------------------------------------------------------*/
+.reasons {
+    padding: 2.5rem 0.9375rem 2.5rem;
+    background-color: #FFFAF5;
+}
+
+@media (min-width: 768px) {
+    .reasons {
+        padding: 5rem 0.9375rem 5rem;
+    }
+
+    .reasons__container {
+        max-width: 56.25rem;
+        margin: 0 auto;
+    }
+}
+
+.reasons__catch .line1 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.875rem;
+    font-weight: bold;
+    color: #FD5B19;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .reasons__catch .line1 {
+        font-size: 2.5rem;
+    }
+}
+
+.reasons__catch {
+    margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .reasons__catch {
+        margin-bottom: 1.5rem;
+        text-align: center;
+    }
+}
+
+.letter {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #000;
+}
+
+.letter1 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #000;
+}
+
+@media (min-width: 768px) {
+    .letter {
+        font-size: 1.75rem;
+        margin-left: 0.5rem;
+    }
+}
+
+.number {
+    font-family: 'Outfit', sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #000;
+}
+
+@media (min-width: 768px) {
+    .number {
+        font-size: 3rem;
+    }
+}
+
+.line1,
+.line2 {
+    display: block;
+    line-height: 1.3;
+}
+
+@media (min-width: 768px) {
+
+    .line1,
+    .line2 {
+        display: inline;
+        line-height: 1.3;
+    }
+}
+
+.line2 {
+    text-align: center;
+}
+
+.reasons__img-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 3rem;
+}
+
+@media (min-width: 768px) {
+    .reasons__img-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        column-gap: 3.75rem;
+    }
+}
+
+.reasons__img-box {
+    text-align: center;
+}
+
+.reasons__img {
+    width: 11.25rem;
+    height: 11.25rem;
+    border-radius: 50%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 0.5rem;
+    position: relative;
+}
+
+@media (min-width: 768px) {
+    .reasons__img {
+        width: 14.875rem;
+        height: 14.875rem;
+        margin: 0 auto 0.5rem;
+    }
+}
+
+.reasons__img img {
+    width: 50%;
+    height: auto;
+    display: block;
+}
+
+.reasons__img .reasons__img2 {
+    width: 35%;
+    height: auto;
+    display: block;
+}
+
+.reasons__text {
+    font-size: 1.125rem;
+    font-weight: bold;
+}
+
+.reasons__number {
+    position: absolute;
+    font-family: 'Outfit', sans-serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #FD5B19;
+    top: -15%;
+    left: 9%;
+}
+
+@media (min-width: 768px) {
+    .reasons__number {
+        font-size: 3.5rem;
+        top: -21%;
+        left: -2%;
+    }
+}
+
+.reason__text {
+    font-weight: 400;
+    margin-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+    .reason__text {
+        margin-bottom: 4rem;
+    }
+}
+
+/* faq
+------------------------------------------------*/
+.faq {
+    padding: 2.5rem 0.9375rem 2.5rem;
+    background-color: #FFFAF5;
+}
+
+@media (min-width: 768px) {
+    .faq {
+        padding: 5rem 0.9375rem 5rem;
+    }
+}
+
+.faq__container {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 768px) {
+    .faq__container {
+        max-width: 56.25rem;
+        margin: 0 auto;
+    }
+}
+
+/* アコーディオン */
+.faq-accordion {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+@media (min-width: 768px) {
+    .faq-accordion {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+}
+
+.faq__accordion-box {
+    border: 1px solid #FD5B19;
+    border-radius: 0.5rem;
+    background-color: #fff;
+}
+
+.faq__question {
+    position: relative;
+    display: flex;
+    align-items: baseline;
+    padding: 1.05rem 2.675rem 1.05rem 1.25rem;
+}
+
+@media (min-width: 768px) {
+    .faq__question {
+        padding: 1.5rem 2rem 1.5rem;
+    }
+}
+
+.faq__question::before {
+    content: "Q.";
+    display: flex;
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #FD5B19;
+    margin-right: 0.5rem;
+    line-height: 1;
+}
+
+.faq__question::after {
+    content: '＋';
+    position: absolute;
+    right: 1rem;
+    font-size: 1.25rem;
+    color: #000;
+    font-weight: bold;
+}
+
+@media (min-width: 768px) {
+    .faq__question::after {
+        right: 2rem;
+    }
+}
+
+.faq__question.open::after {
+    content: 'ー';
+}
+
+.faq__text {
+    font-size: 0.875rem;
+    font-weight: bold;
+    color: #000;
+}
+
+@media (min-width: 768px) {
+    .faq__text {
+        font-size: 1.125rem;
+    }
+}
+
+.faq__answer-container {
+    display: none;
+    padding: 0 1.25rem 1.25rem 1.25rem;
+}
+
+@media (min-width: 768px) {
+    .faq__answer-container {
+        display: none;
+        padding: 0 1.9rem 1.5rem;
+    }
+}
+
+.faq__answer-text {
+    font-size: 0.875rem;
+    font-weight: 400;
+    color: #000;
+}
+
+@media (min-width: 768px) {
+    .faq__answer-text {
+        font-size: 1rem;
+    }
+}
+
+/* footer
+--------------------------------------------------*/
+.footer {
+    padding: 2rem 5.8125rem 2rem;
+    background-color: #333;
+}
+
+@media (min-width: 768px) {
+    .footer {
+        padding: 2rem 0 2rem;
+    }
+}
+
+.footer__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .footer__container {
+        max-width: 68.75rem;
+        margin: 0 auto;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+}
+
+.footer__logo {
+    text-align: center;
+}
+
+.footer__logo a {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    line-height: 1;
+}
+
+@media (min-width: 768px) {}
+
+.footer__logo a {
+    font-size: 2rem;
+}
+
+.footer__nav-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1rem;
+    line-height: 1.2;
+}
+
+@media (min-width: 768px) {
+    .footer__nav-box {
+        flex-direction: row;
+        column-gap: 2rem;
+        line-height: 1.75;
+    }
+}
+
+.footer__nav-list a {
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: #fff;
+}
+
+@media (min-width: 768px) {
+    .footer__nav-list a {
+        font-size: 0.8125rem;
+    }
+}
+
+@media (hover: hover) {
+
+    .footer__logo a:hover,
+    .footer__img-box a:hover,
+    .footer__nav-list a:hover {
+        opacity: 0.6;
+        transition: opacity 0.2s ease;
+    }
+}
